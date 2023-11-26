@@ -1,0 +1,146 @@
+
+/* New show page */
+
+/* MovieShow.css */
+#movieShow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-image: url('./assets/capstonebackground.png');  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #000000;
+    min-height: 100vh;
+  }
+  
+  .show-container {
+    display: flex;
+    flex-direction: row; /* Set main axis to horizontal */
+    align-items: flex-start; /* Align items to start of cross axis */
+    justify-content: space-around; /* Evenly distribute space around items */
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 20px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .movie-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .movie-details {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between;
+    max-width: 600px;
+    width: 100%;
+    margin-left: 20px;
+  }
+  
+  .movie-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .trailer-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .trailer-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+  
+  .movie-rating {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .movie-genre,
+  .movie-description {
+    margin: 5px 0;
+  }
+  
+  .movie-trailer-link {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #e62429;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .movie-trailer-link:hover {
+    background-color: #c4121c;
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust 'minmax' for your preferred size */
+    grid-auto-rows: minmax(100px, auto); /* Adjust 'minmax' to set the minimum row height */
+    gap: 1rem;
+    align-items: start;
+    justify-items: center; /* Center items horizontally */
+    padding-bottom: 30px; /* /* Add some padding at the bottom */
+  }
+  
+  .movie {
+    width: 200px; /* Adjust width as needed */
+    margin: 0.5rem; /* Space between movies */
+    display: flex; /* Use flexbox for vertical layout inside each movie */
+    flex-direction: column;
+  }
+  
+  .movie img {
+    width: 100%; /* Ensure image fills the container */
+    height: auto;
+    border-radius: 10px; /* Optional, for rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .movie h3 {
+    text-align: center; /* Center movie titles */
+    margin: 0.5rem 0;
+  }

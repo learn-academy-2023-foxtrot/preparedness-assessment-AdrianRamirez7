@@ -1,0 +1,246 @@
+* {
+    background-image: url("https://github.com/learn-academy-2023-foxtrot/preparedness-assessment-AdrianRamirez7/blob/main/preparedness-frontend/src/assets/background-image.jpeg?raw=true");
+    background-size: cover;
+}
+
+
+
+
+
+
+
+/* Home Page CSS */
+
+.movie-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px; /* Add some space below the container for when images expand */
+  }
+  
+  .movie {
+    flex: 0 0 auto;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    text-align: center;
+    transition: transform 0.3s ease; /* Smooth transition for the transform property */
+    position: relative; /* Needed for proper z-index functioning */
+    z-index: 1; /* Ensures that the image starts at a higher stacking context than the base level */
+  }
+  
+  .movie:hover {
+    transform: scale(1.5); /* Enlarges the movie to 150% of its original size on hover */
+    z-index: 2; /* Ensures the enlarged movie is above other content */
+  }
+  
+  .movie img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    transition: transform 0.3s ease; /* Ensure the image also has a smooth transition */
+  }
+  
+  /* Optional: Adds a slightly darker overlay on hover to focus attention on the hovered movie */
+  .movie:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: -1; /* Ensures the overlay is behind the movie content */
+  }
+  
+  /* Scrollbar styles */
+  .movie-container::-webkit-scrollbar {
+    height: 10px;
+  }
+  
+  .movie-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+  .movie-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  /* Search bar  */
+  
+  /* Container for the search bar to align it nicely */
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  /* Style the search input */
+  .search-input {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 20px 0 0 20px; /* Rounded corners on the left side */
+    width: 300px; /* You can adjust the width as needed */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for interactions */
+  }
+  
+  /* Style the search button */
+  .search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #007BFF; /* Bootstrap primary blue, you can choose your own color */
+    color: white;
+    text-transform: uppercase; /* Optional: makes the text uppercase */
+    border-radius: 0 20px 20px 0; /* Rounded corners on the right side */
+    cursor: pointer; /* Changes the cursor to indicate it's clickable */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  /* Change background color on hover for the button */
+  .search-button:hover {
+    background-color: #0056b3; /* A darker shade of blue */
+  }
+  
+  /* Slightly increase the size of the input field when it's focused */
+  .search-input:focus {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+  }
+  
+  /* Optional: hide the search button on mobile to save space */
+  @media (max-width: 768px) {
+    .search-button {
+      display: none;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  new movie code 
+
+
+
+/* New show page */
+
+/* MovieShow.css */
+#movieShow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-image: url('./assets/capstonebackground.png');  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #000000;
+    min-height: 100vh;
+  }
+  
+  .show-container {
+    display: flex;
+    flex-direction: row; /* Set main axis to horizontal */
+    align-items: flex-start; /* Align items to start of cross axis */
+    justify-content: space-around; /* Evenly distribute space around items */
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 20px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .movie-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .movie-details {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between;
+    max-width: 600px;
+    width: 100%;
+    margin-left: 20px;
+  }
+  
+  .movie-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .trailer-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .trailer-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+  
+  .movie-rating {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .movie-genre,
+  .movie-description {
+    margin: 5px 0;
+  }
+  
+  .movie-trailer-link {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #e62429;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .movie-trailer-link:hover {
+    background-color: #c4121c;
+  }
+  
+  
+  
+  
